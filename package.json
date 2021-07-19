@@ -1,0 +1,34 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "description": "mars-man components including inputs and route guards",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+
+  "author": "Marc Frame",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "testing"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mars-manjs/components.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/mars-manjs/components/issues"
+  },
+  "homepage": "https://github.com/mars-manjs/components#readme"
+}
