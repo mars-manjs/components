@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "outDir": "lib",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "esModuleInterop" : true,
+        "allowJs": true,
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.iterable"
+        ],
+        "jsx": "react",
+        "rootDir": "src",
+        "declaration": true,
+        "types" : ["jest"],
+        "sourceMap": true
+    },
+    "exclude": [
+        "build",
+        "node_modules",
+        "testing",
+        // "__tests__",
+        "lib"
+    ]
+}
