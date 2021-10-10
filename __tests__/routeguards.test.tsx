@@ -1,7 +1,7 @@
 import * as React from 'react'
-import {LoadedGuard} from '../src'
+import {LoadedRoute} from '../src'
 import { render, screen } from "@testing-library/react";
-import { BaseDataModel, MockRepository } from '@mars-man/models'
+import { Model, MockRepo } from '@mars-man/models'
 import '@testing-library/jest-dom';
 
 
@@ -20,10 +20,10 @@ const ErrorComponent = () => {
 
 describe('LoadedGuard', ()=>{
     test('should show correct component for state', async ()=>{
-        const model = new BaseDataModel({
-            repos: new MockRepository({data: undefined})
+        const model = new Model({
+            repos: new MockRepo({data: undefined})
         })
-        const {getByText} = render(<LoadedGuard model={model} 
+        const {getByText} = render(<LoadedRoute model={model} 
             Component={LoadedComponent}
             UnloadedComponent={UnloadedComponent}
             LoadingComponent={LoadingComponent}
@@ -47,10 +47,10 @@ describe('LoadedGuard', ()=>{
     })
 
     test('should show correct LoadedState during reloading', async ()=>{
-        const model = new BaseDataModel({
-            repos: new MockRepository({data: undefined})
+        const model = new Model({
+            repos: new MockRepo({data: undefined})
         })
-        const {getByText} = render(<LoadedGuard model={model} 
+        const {getByText} = render(<LoadedRoute model={model} 
             Component={LoadedComponent}
             UnloadedComponent={UnloadedComponent}
             LoadingComponent={LoadingComponent}
@@ -87,10 +87,10 @@ describe('LoadedGuard', ()=>{
 
 
     test('should show error component', async ()=>{
-        const model = new BaseDataModel({
-            repos: new MockRepository({data: undefined, finalState: 'error'})
+        const model = new Model({
+            repos: new MockRepo({data: undefined, finalState: 'error'})
         })
-        const {getByText} = render(<LoadedGuard model={model} 
+        const {getByText} = render(<LoadedRoute model={model} 
             Component={LoadedComponent}
             ErrorComponent={ErrorComponent}
             />)

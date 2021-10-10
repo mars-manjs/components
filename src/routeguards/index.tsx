@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { BaseDataModel } from '@mars-man/models'
+import { Model } from '@mars-man/models'
 import {observer} from 'mobx-react'
 
 
-export const LoadedGuard = observer((props: {
-    model: BaseDataModel
+export const LoadedRoute = observer((props: {
+    model: Model
     Component: React.ComponentType
     LoadingComponent?: React.ComponentType
     UnloadedComponent?: React.ComponentType
